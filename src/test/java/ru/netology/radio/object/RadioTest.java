@@ -15,7 +15,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void shouldntSetStationBigger () {
+    public void shouldntSetStationBigger9 () {
         Radio radio = new Radio();
         radio.setCurrentStation(10);
 
@@ -24,7 +24,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void shouldntSetStationLower () {
+    public void shouldntSetStationLower0 () {
         Radio radio = new Radio();
         radio.setCurrentStation(-10);
 
@@ -68,6 +68,24 @@ public class RadioTest {
 
         int expected = 9;
         int actual= radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldntSetVolumeBigger10 () {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(11);
+
+        int expected = 0;
+        int actual= radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldntSetVolumeLower0 () {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(-10);
+
+        int expected = 0;
+        int actual= radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
     @Test
